@@ -6,12 +6,12 @@ namespace Day11
         {
             InitializeComponent();
         }
-        FuncMas mas;
+        FuncMas<double> mas;
         private void button1_Click(object sender, EventArgs e)
         {
             if (int.TryParse(textBox_countmas.Text, out int count))
             {
-                mas = new FuncMas(count);
+                mas = new FuncMas<double>(count);
                 Random rnd = new Random();
                 for (int i = 0; i < count; i++)
                 {
@@ -36,7 +36,7 @@ namespace Day11
         {
             if (int.TryParse(textBox_countmas.Text, out int count)&double.TryParse(textBox_x.Text,out double x))
             {
-                mas = new FuncMas(count, x);
+                mas = new FuncMas<double>(count, x);
                 Update();
             }
         }
